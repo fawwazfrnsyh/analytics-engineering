@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: trip_total_company    # table name
+    columns:
+      - namse: company    # column name
+        tests:
+          - not_null
+  - name: trip_miles_company
+    column:
+      - name: company
+        tests:
+          - not_null
+  - name: average_fare
+    column:
+      - name: day_of_week
+        tests:
+          - accepted_values:
+              value : [1,2,3,4,5,6,7]
+  - name: top10_pickup
+    column:
+      - name: pickup_community_area
+        tests:
+          - unique:
+              config:
+                where: "pickup_community_area = 10"

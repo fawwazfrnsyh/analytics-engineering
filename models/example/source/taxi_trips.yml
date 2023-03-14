@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: taxi_trips
+    tables:
+      - name: chicago_taxi_trips
